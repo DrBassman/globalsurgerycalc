@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+    <title>Global Surgery Period Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <img class="rounded float-right" src="lol-logo.png" alt="Logo">
+        <h1>Global Surgery</h1>
+        <p>Quickly calculate global surgery dates.</p>
+      </div>
+      <table class="table table-bordered table-responsive">
+        <tr>
+          <td>Surgery Date:</td>
+          <td><input class="form-control" type="date" id="surg_dt" required onchange="update_surg_dt()"></td>
+          <td><button onclick="copy_surg_dt()">Copy</button></td>
+        </tr>
+        <tr>
+          <td>Assumed Care Date:</td>
+          <td><input class="form-control" type="date" id="assumed_dt" required onchange="update_assumed_dt()"></td>
+          <td><button onclick="copy_assumed_dt()">Copy</button></td>
+        </tr>
+        <tr>
+          <td>Relinquished Date:</td>
+          <td><input class="form-control" type="date" id="relinq_dt" required onchange="update_relinq_dt()"></td>
+          <td><button onclick="copy_relinquished_dt()">Copy</button></td>
+        </tr>
+        <tr>
+          <td>End of Global Period Date:</td>
+          <td><input class="form-control" type="date" id="global_end_dt" disabled></td>
+          <td><button onclick="copy_end_global_dt()">Copy</button></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input class="form-control" type="text" size="80" id="note_txt" disabled value="note_txt"></td>
+          <td><button onclick="copy_note_txt()">Copy</button></td>
+        </tr>
+      </table>
+    </div>
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="global.js"></script>
+  </body>
+</html>
