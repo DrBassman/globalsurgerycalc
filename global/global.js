@@ -7,15 +7,19 @@ function days_between(from_dt, to_dt) {
   return(diffDays + 1);
 }
 
-function format_date(date, sep) {
+function format_date(date, sep, yrLen = 4) {
   var month, day, year;
   month = '' + (date.getMonth() + 1);
   day = '' + date.getDate();
   year = date.getFullYear();
+  if (yrLen == 2) {
+    year = ('' + date.getFullYear()).substr(2);
+  }
   if (month.length < 2) month = '0' + month;
   if (day.length < 2) day = '0' + day;
   if(sep == "-") return [year,month,day].join('-');
   if(sep == "/") return [month,day,year].join('/');
+  return '' + month + day + year;
 }
 
 function str_to_date(str) {
@@ -27,13 +31,13 @@ function str_to_date(str) {
 
 function update_note_txt() {
   var note_txt, num_days = days_between(relinq_dt, assumed_dt);
-  note_txt = "Assumed care " + format_date(assumed_dt, "/") + "; ";
-  note_txt = note_txt + "Relinquished care " + format_date(relinq_dt, "/") + "; ";
+  note_txt = "ASSUMED CARE " + format_date(assumed_dt, "/", 2) + " ";
+  note_txt = note_txt + "RELINQUISHED CARE " + format_date(relinq_dt, "/", 2) + " ";
   note_txt = note_txt + num_days;
   if (num_days == 1) {
-    note_txt = note_txt + " Day";
+    note_txt = note_txt + " DAY";
   } else {
-    note_txt = note_txt + " Days";
+    note_txt = note_txt + " DAYS";
   }
   $('#note_txt').val(note_txt);
 }
