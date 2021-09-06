@@ -11,9 +11,9 @@ function format_date(date, sep, yrLen = 4) {
   var month, day, year;
   month = '' + (date.getMonth() + 1);
   day = '' + date.getDate();
-  year = date.getFullYear();
+  year = '' + date.getFullYear();
   if (yrLen == 2) {
-    year = ('' + date.getFullYear()).substr(2);
+    year = year.substr(2);
   }
   if (month.length < 2) month = '0' + month;
   if (day.length < 2) day = '0' + day;
