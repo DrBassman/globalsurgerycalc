@@ -31,8 +31,8 @@ function str_to_date(str) {
 
 function update_note_txt() {
   var note_txt, num_days = days_between(relinq_dt, assumed_dt);
-  note_txt = "ASSUMED CARE " + format_date(assumed_dt, "/", 2) + " ";
-  note_txt = note_txt + "RELINQUISHED CARE " + format_date(relinq_dt, "/", 2) + " ";
+  note_txt = "ASSUMED " + format_date(assumed_dt, "/", 2) + " ";
+  note_txt = note_txt + "RELINQUISHED " + format_date(relinq_dt, "/", 2) + " ";
   note_txt = note_txt + num_days;
   if (num_days == 1) {
     note_txt = note_txt + " DAY";
