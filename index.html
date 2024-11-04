@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Surgery Period Calculator</title>
-    <link rel="stylesheet" type="text/css" href="/css/foundation/foundation.css">
-    <link rel="stylesheet" type="text/css" href="/css/foundation/app.css">
-    <link rel="stylesheet" type="text/css" href="global.css">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Global Surgery Period Calculator</title>
+        <link rel="stylesheet" type="text/css" href="/css/foundation/foundation.css">
+        <link rel="stylesheet" type="text/css" href="/css/foundation/app.css">
+        <link rel="stylesheet" type="text/css" href="css/global.css">
 </head>
-  <body>
-    <div class="grid-container">
-      <div class="callout secondary">
-        <div class="grid-x grid-padding-x">
-          <div class="cell">
-            <img class="float-right" src="/images/lol-logo.png" alt="Logo">
-              <h1>Global Surgery</h1>
-              <p>Quickly calculate global surgery dates.</p>
-          </div>
+    <body>
+        <div class="grid-container">
+            <div class="callout secondary">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <img class="float-right" src="/images/lol-logo.png" alt="Logo">
+                        <h1>Global Surgery</h1>
+                        <p>Quickly calculate global surgery dates.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="cell small-2">
+                    <label>Surgery Date:<input class="form-control" type="date" id="surg_dt" required onchange="update_surg_dt()"></label>
+                    <button class="button hollow secondary" onclick="copy_surg_dt()">Copy</button>
+                </div>
+                <div class="cell small-2">
+                    <label>Assumed Care Date: <input class="form-control" type="date" id="assumed_dt" required onchange="update_assumed_dt()"></label>
+                    <button class="button hollow secondary" onclick="copy_assumed_dt()">Copy</button>
+                </div>
+                <div class="cell small-2">
+                    <label>Relinquished Date: <input class="form-control" type="date" id="relinq_dt" required onchange="update_relinq_dt()"></label>
+                    <button class="button hollow secondary" onclick="copy_relinquished_dt()">Copy</button>
+                </div>
+                <div class="cell small-2">
+                    <label>End of Global Period Date: <input class="form-control" type="date" id="global_end_dt" disabled></label>
+                    <button class="button hollow secondary" onclick="copy_end_global_dt()">Copy</button>
+                </div>
+                <div class="cell small-8"></div>
+                <div class="cell small-8">
+                    <input class="form-control" type="text" size="80" id="note_txt" disabled value="note_txt">
+                    <button class="button hollow secondary" onclick="copy_note_txt()">Copy</button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="grid-x">
-        <div class="cell small-2">
-          <label>Surgery Date:<input class="form-control" type="date" id="surg_dt" required onchange="update_surg_dt()"></label>
-          <button class="button hollow secondary" onclick="copy_surg_dt()">Copy</button>
-        </div>
-        <div class="cell small-2">
-          <label>Assumed Care Date: <input class="form-control" type="date" id="assumed_dt" required onchange="update_assumed_dt()"></label>
-          <button class="button hollow secondary" onclick="copy_assumed_dt()">Copy</button>
-        </div>
-        <div class="cell small-2">
-          <label>Relinquished Date: <input class="form-control" type="date" id="relinq_dt" required onchange="update_relinq_dt()"></label>
-          <button class="button hollow secondary" onclick="copy_relinquished_dt()">Copy</button>
-        </div>
-        <div class="cell small-2">
-          <label>End of Global Period Date: <input class="form-control" type="date" id="global_end_dt" disabled></label>
-          <button class="button hollow secondary" onclick="copy_end_global_dt()">Copy</button>
-        </div>
-        <div class="cell small-8"></div>
-        <div class="cell small-8">
-          <input class="form-control" type="text" size="80" id="note_txt" disabled value="note_txt">
-          <button class="button hollow secondary" onclick="copy_note_txt()">Copy</button>
-        </div>
-      </div>
-    </div>
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
-    <script src="global.js"></script>
-  </body>
+        <script src="/js/foundation/vendor/jquery.js"></script>
+        <script src="/js/foundation/vendor/what-input.js"></script>
+        <script src="/js/foundation/vendor/foundation.js"></script>
+        <script src="/js/foundation/app.js"></script>
+        <script src="js/global.js"></script>
+    </body>
 </html>
