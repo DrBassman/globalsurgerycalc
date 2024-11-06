@@ -21,26 +21,53 @@
                 </div>
             </div>
             <div class="grid-x">
-                <div class="cell small-2">
-                    <label>Surgery Date:<input class="form-control" type="date" id="surg_dt" required onchange="update_surg_dt()"></label>
-                    <button class="button hollow secondary" onclick="copy_surg_dt()">Copy</button>
+                <div class="cell small-5">
+                    <div class="input-group">
+                        <span class="input-group-label">Surgery Date:</span>
+                        <input class="input-group-field" type="date" id="surg_dt" required onchange="update_surg_dt()">
+                        <div class="input-group-button">
+                            <button class="button secondary" onclick="copy_surg_dt()">Copy</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="cell small-2">
-                    <label>Assumed Care Date: <input class="form-control" type="date" id="assumed_dt" required onchange="update_assumed_dt()"></label>
-                    <button class="button hollow secondary" onclick="copy_assumed_dt()">Copy</button>
+                <div class="cell"></div>
+                <div class="cell small-5">
+                    <div class="input-group">
+                        <span class="input-group-label">Assumed Care Date:</span>
+                        <input class="input-group-field" type="date" id="assumed_dt" required onchange="update_assumed_dt()">
+                        <div class="input-group-button">
+                            <button class="button secondary" onclick="copy_assumed_dt()">Copy</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="cell small-2">
-                    <label>Relinquished Date: <input class="form-control" type="date" id="relinq_dt" required onchange="update_relinq_dt()"></label>
-                    <button class="button hollow secondary" onclick="copy_relinquished_dt()">Copy</button>
+                <div class="cell"></div>
+                <div class="cell small-5">
+                    <div class="input-group">
+                        <span class="input-group-label">Relinquished Date:</span>
+                        <input class="input-group-field" type="date" id="relinq_dt" required onchange="update_relinq_dt()">
+                        <div class="input-group-button">
+                            <button class="button secondary" onclick="copy_relinquished_dt()">Copy</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="cell small-2">
-                    <label>End of Global Period Date: <input class="form-control" type="date" id="global_end_dt" disabled></label>
-                    <button class="button hollow secondary" onclick="copy_end_global_dt()">Copy</button>
+                <div class="cell"></div>
+                <div class="cell small-5">
+                    <div class="input-group">
+                        <span class="input-group-label">End of Global Period Date:</span>
+                        <input class="input-group-field" type="date" id="global_end_dt" disabled>
+                        <div class="input-group-button">
+                            <button class="button secondary" onclick="copy_end_global_dt()">Copy</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="cell small-8"></div>
-                <div class="cell small-8">
-                    <input class="form-control" type="text" size="80" id="note_txt" disabled value="note_txt">
-                    <button class="button hollow secondary" onclick="copy_note_txt()">Copy</button>
+                <div class="cell"></div>
+                <div class="cell small-6">
+                    <div class="input-group">
+                        <input class="input-group-field" type="text" size="80" id="note_txt" disabled value="note_txt">
+                        <div class="input-group-button">
+                            <button class="button primary" onclick="copy_note_txt()">Copy</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
